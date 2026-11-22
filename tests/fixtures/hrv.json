@@ -1,0 +1,13 @@
+{
+  "hrvSummaries": [
+    {
+      "baseline": { "balancedLow": 50, "balancedUpper": 72, "lowUpper": 46, "markerValue": 0.4 },
+      "calendarDate": "2026-01-10",
+      "feedbackPhrase": "HRV_BALANCED_2",
+      "lastNight5MinHigh": 80,
+      "lastNightAvg": 61,
+      "status": "BALANCED",
+      "weeklyAvg": 58
+    }
+  ]
+}

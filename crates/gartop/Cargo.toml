@@ -1,0 +1,21 @@
+[package]
+name = "gartop"
+description = "htop/btop-style terminal dashboard for Garmin data"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+gartop-core.workspace = true
+anyhow.workspace = true
+chrono.workspace = true
+clap.workspace = true
+ratatui.workspace = true
+
+[dev-dependencies]
+insta.workspace = true
+tempfile.workspace = true
+
+[lints]
+workspace = true

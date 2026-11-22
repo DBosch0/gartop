@@ -1,0 +1,26 @@
+{
+  "data": [
+    {
+      "calendarDate": "2026-01-10",
+      "bodyBattery": { "chargedValue": 60, "drainedValue": 55, "latestValue": 40, "maxValue": 88, "minValue": 20 },
+      "calories": { "burnedActive": 650, "burnedResting": 2300, "burnedTotal": 2950 },
+      "heartRate": { "maxValue": 165, "minValue": 48, "restingValue": 52 },
+      "intensityMinutes": { "goal": 150, "moderate": 20, "vigorous": 25 },
+      "movement": {
+        "floorsAscended": { "distanceInMeters": 30.0, "goal": 10, "value": 10 },
+        "steps": { "distanceInMeters": 7300.0, "goal": 8000, "value": 9120 }
+      },
+      "stress": { "avgLevel": 31, "maxLevel": 90, "qualifier": "balanced" },
+      "includesWellnessData": true,
+      "source": "garmin"
+    },
+    {
+      "calendarDate": "2026-01-11",
+      "bodyBattery": {},
+      "calories": { "burnedResting": 2300, "burnedTotal": 2300 },
+      "heartRate": {},
+      "movement": { "steps": { "goal": 8000, "value": 120 } },
+      "stress": { "avgLevel": -1 }
+    }
+  ]
+}

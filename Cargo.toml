@@ -1,0 +1,45 @@
+[workspace]
+resolver = "3"
+members = ["crates/gartop-core", "crates/gartop-fetch", "crates/gartop"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+rust-version = "1.89"
+
+[workspace.dependencies]
+gartop-core = { path = "crates/gartop-core" }
+anyhow = "1"
+base64 = "0.22"
+chrono = { version = "0.4", features = ["serde"] }
+clap = { version = "4.5", features = ["derive"] }
+directories = "6"
+dotenvy = "0.15"
+humantime = "2"
+insta = "1"
+mockito = "1"
+ratatui = "0.29"
+rusqlite = { version = "0.32", features = ["bundled"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tempfile = "3"
+thiserror = "2"
+toml = "0.8"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+ureq = "3"
+
+[workspace.lints.rust]
+missing_debug_implementations = "warn"
+
+[workspace.lints.clippy]
+pedantic = { level = "warn", priority = -1 }
+module_name_repetitions = "allow"
+missing_errors_doc = "allow"
+missing_panics_doc = "allow"
+cast_precision_loss = "allow"
+cast_possible_truncation = "allow"
+cast_sign_loss = "allow"
+cast_possible_wrap = "allow"
+assert_is_empty = "allow"

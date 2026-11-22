@@ -1,0 +1,30 @@
+#!/sbin/openrc-run
+# OpenRC service for gartop-fetch.
+#   install -Dm755 contrib/openrc/gartop-fetch /etc/init.d/gartop-fetch
+#   install -Dm644 contrib/openrc/gartop-fetch.confd /etc/conf.d/gartop-fetch   # set GARTOP_USER
+#   rc-update add gartop-fetch default && rc-service gartop-fetch start
+
+description="Fetch Garmin data for gartop"
+
+: "${GARTOP_USER:?set GARTOP_USER in /etc/conf.d/gartop-fetch}"
+: "${GARTOP_INTERVAL:=4h}"
+_home="$(getent passwd "${GARTOP_USER}" | cut -d: -f6)"
+: "${GARTOP_BIN:=${_home}/.local/bin/gartop-fetch}"
+
+supervisor="supervise-daemon"
+command="${GARTOP_BIN}"
+command_args="sync --watch ${GARTOP_INTERVAL}"
+command_user="${GARTOP_USER}"
+supervise_daemon_args="--env HOME=${_home}"
+output_log="/var/log/gartop-fetch.log"
+error_log="/var/log/gartop-fetch.log"
+respawn_delay=60
+
+depend() {
+	need net
+	after ntpd chronyd
+}
+
+start_pre() {
+	checkpath --file --owner "${GARTOP_USER}" --mode 0640 /var/log/gartop-fetch.log
+}

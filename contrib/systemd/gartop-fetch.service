@@ -1,0 +1,10 @@
+# systemd user unit: install with the timer into ~/.config/systemd/user/ and run
+#   systemctl --user enable --now gartop-fetch.timer
+[Unit]
+Description=Fetch Garmin data for gartop
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=%h/.local/bin/gartop-fetch sync

@@ -1,0 +1,11 @@
+#!/bin/sh
+# runit service for gartop-fetch.
+#   cp -r contrib/runit/gartop-fetch /etc/runit/sv/      # then set GARTOP_USER below
+#   ln -s /etc/runit/sv/gartop-fetch /run/runit/service/  (Artix; /var/service on Void)
+GARTOP_USER="your-username"
+GARTOP_INTERVAL="4h"
+
+home="$(getent passwd "$GARTOP_USER" | cut -d: -f6)"
+exec 2>&1
+exec chpst -u "$GARTOP_USER" env HOME="$home" \
+	"$home/.local/bin/gartop-fetch" sync --watch "$GARTOP_INTERVAL"

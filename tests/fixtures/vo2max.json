@@ -1,0 +1,10 @@
+[
+  {
+    "cycling": null,
+    "generic": { "calendarDate": "2026-01-10", "sport": "RUNNING", "subSport": "GENERIC", "vo2MaxPreciseValue": 48.5, "vo2MaxValue": 49.0 }
+  },
+  {
+    "cycling": { "calendarDate": "2026-01-11", "sport": "CYCLING", "vo2MaxValue": 45.0 },
+    "generic": null
+  }
+]

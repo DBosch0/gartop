@@ -1,0 +1,7 @@
+# /etc/conf.d/gartop-fetch
+# User whose ~/.config/gartop/.env holds GARMIN_API_KEY and who owns the database.
+GARTOP_USER="your-username"
+# How often to sync (humantime syntax: 30m, 4h, 1d, ...).
+GARTOP_INTERVAL="4h"
+# Path to the binary (default: ~GARTOP_USER/.local/bin/gartop-fetch).
+#GARTOP_BIN="/usr/local/bin/gartop-fetch"

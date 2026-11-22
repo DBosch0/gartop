@@ -1,0 +1,10 @@
+# dinit user service for gartop-fetch (runs under `dinit --user`).
+# Replace /home/your-username with your home directory, then:
+#   install -Dm644 contrib/dinit/gartop-fetch ~/.config/dinit.d/gartop-fetch
+#   dinitctl enable gartop-fetch
+type = process
+command = /home/your-username/.local/bin/gartop-fetch sync --watch 4h
+restart = true
+restart-delay = 60
+smooth-recovery = true
+logfile = /home/your-username/.cache/gartop/fetch.log

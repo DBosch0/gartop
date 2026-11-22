@@ -1,0 +1,20 @@
+[
+  {
+    "calendarDate": "2026-01-10",
+    "sleepTimeSeconds": 27000,
+    "deepSleepSeconds": 5400,
+    "lightSleepSeconds": 14400,
+    "remSleepSeconds": 7200,
+    "awakeSleepSeconds": 900,
+    "sleepScores": {
+      "overall": { "qualifierKey": "GOOD", "value": 82 },
+      "totalDuration": { "qualifierKey": "GOOD" }
+    },
+    "sleepScoreFeedback": "POSITIVE_LONG_AND_DEEP"
+  },
+  {
+    "calendarDate": "2026-01-11",
+    "sleepTimeSeconds": 0,
+    "sleepScores": {}
+  }
+]

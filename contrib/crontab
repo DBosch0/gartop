@@ -1,0 +1,4 @@
+# gartop-fetch every 4 hours (edit with `crontab -e`).
+# cron runs with a minimal environment; HOME is set, so the API key is read from
+# ~/.config/gartop/.env and data goes to ~/.local/share/gartop/.
+0 */4 * * * $HOME/.local/bin/gartop-fetch sync >> $HOME/.cache/gartop/fetch.log 2>&1
